@@ -37,7 +37,7 @@ export default function Home() {
         className={styles.main}
         sx={{
           marginTop: '64px',
-          backgroundColor: 'rgba(255, 192, 203, 0.4)',
+          backgroundColor: 'rgba(128, 0, 128, 0.4)', // Morado
           padding: '16px',
           borderRadius: '8px',
           minHeight: '100vh'
