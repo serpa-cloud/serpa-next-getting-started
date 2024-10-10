@@ -1,0 +1,18 @@
+{
+  "src/app/globals.css": {
+    "uuid": "15558b16c961778789c184a694bb3697c4ff6342b34a5cf308aa266a9abb000d",
+    "hash": "6032f90af079b8471b022f009c50c96433761f75f2617f81ef06f0c1fb6d9f0c"
+  },
+  "src/app/layout.js": {
+    "uuid": "a698ada99ece851f34ebb5fa4f10bc5df122957cfc6604461e62522787a3297d",
+    "hash": "d03a835b3e32c271274249fb3852ceadd7f6c2f3e081603dfdca909f33932b4a"
+  },
+  "src/app/page.js": {
+    "uuid": "7f4a3d849865b70ba259720dc08bcb9f28e7715f699e439c03b0a8216f7d2e7c",
+    "hash": "6b58ff20eb370e63b44ea72aebe9319e5e5715bd2a9a287166260092613f32b5"
+  },
+  "src/app/page.module.css": {
+    "uuid": "b76dd02a983e07a5f0736d2f6ed69f2b7c365eca543568671cf56414687eb87d",
+    "hash": "c0326c7366adb3c1111e83a3f31ab71f89eb9b78086fe4171636265c1ea7f956"
+  }
+}

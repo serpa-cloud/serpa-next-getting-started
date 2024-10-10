@@ -1,26 +1,74 @@
-import Image from "next/image";
+"use client";
+
 import styles from "./page.module.css";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { useEffect } from "react";
+
+function Header() {
+  return (
+    <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ color: "blue" }}>
+          Doctores a domicilio
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+}
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-      </div>
-    </main>
+  return (
+    <>
+      <Header />
+      <Container
+        className={styles.main}
+        sx={{
+          marginTop: '64px',
+          backgroundColor: 'rgba(255, 192, 203, 0.4)',
+          padding: '16px',
+          borderRadius: '8px',
+          minHeight: '100vh'
+        }}
+      >
+        <Typography variant="h4" component="h1" gutterBottom sx={{ color: 'red' }}>
+          Agenda una demo con Elsa
+        </Typography>
+        <Box
+          component="form"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+            marginTop: '16px'
+          }}
+        >
+          <TextField label="Nombre" variant="outlined" required />
+          <TextField label="Empresa" variant="outlined" required />
+          <TextField label="Cargo" variant="outlined" required />
+          <TextField label="Correo de contacto" variant="outlined" type="email" required />
+          <Button variant="contained" color="primary" type="submit">
+            Enviar
+          </Button>
+        </Box>
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/emilia-_vy/quick-call"
+          style={{ minWidth: '320px', height: '700px', marginTop: '16px' }}
+        ></div>
+      </Container>
+    </>
   );
 }

@@ -1,0 +1,8 @@
+{
+  "name": "serpa-next-getting-started",
+  "service": "serpa-next-getting-started",
+  "projectId": "yellow-code",
+  "include": [
+    "src"
+  ]
+}
