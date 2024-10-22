@@ -20,7 +20,7 @@ function Header() {
           style={{ height: "40px", marginRight: "16px" }}
         />
         <Typography variant="h6" component="div" sx={{ color: "blue" }}>
-          Doctores a domicilio
+          Doctores a domicilio 23
         </Typography>
       </Toolbar>
     </AppBar>
@@ -47,43 +47,53 @@ export default function Home() {
       <Container
         className={styles.main}
         sx={{
-          marginTop: '64px',
-          backgroundColor: 'rgba(255, 255, 0, 0.4)', // Amarillo
-          padding: '16px',
-          borderRadius: '8px',
-          minHeight: '100vh',
-          position: 'relative'
+          marginTop: "64px",
+          backgroundColor: "rgba(255, 255, 0, 0.4)", // Amarillo
+          padding: "16px",
+          borderRadius: "8px",
+          minHeight: "100vh",
+          position: "relative",
         }}
       >
         <div
           onClick={handleBandClick}
           style={{
-            position: 'absolute',
-            top: '20px',
-            left: '-50px',
-            width: '200%',
-            height: '50px',
-            backgroundColor: 'red',
-            transform: 'rotate(-45deg)',
-            cursor: 'pointer'
+            position: "absolute",
+            top: "20px",
+            left: "-50px",
+            width: "200%",
+            height: "50px",
+            backgroundColor: "red",
+            transform: "rotate(-45deg)",
+            cursor: "pointer",
           }}
         ></div>
-        <Typography variant="h4" component="h1" gutterBottom sx={{ color: 'red' }}>
+        <Typography
+          variant="h4"
+          component="h1"
+          gutterBottom
+          sx={{ color: "red" }}
+        >
           Agenda una demo con Elsa
         </Typography>
         <Box
           component="form"
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            marginTop: '16px'
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            marginTop: "16px",
           }}
         >
           <TextField label="Nombre" variant="outlined" required />
           <TextField label="Empresa" variant="outlined" required />
           <TextField label="Cargo" variant="outlined" required />
-          <TextField label="Correo de contacto" variant="outlined" type="email" required />
+          <TextField
+            label="Correo de contacto"
+            variant="outlined"
+            type="email"
+            required
+          />
           <Button variant="contained" color="primary" type="submit">
             Enviar
           </Button>
@@ -92,10 +102,14 @@ export default function Home() {
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/emilia-_vy/quick-call"
-            style={{ minWidth: '320px', height: '700px', marginTop: '16px' }}
+            style={{ minWidth: "320px", height: "700px", marginTop: "16px" }}
           ></div>
         )}
-        <Button variant="contained" color="secondary" sx={{ marginTop: '16px' }}>
+        <Button
+          variant="contained"
+          color="secondary"
+          sx={{ marginTop: "16px" }}
+        >
           Sapo Verde
         </Button>
       </Container>
